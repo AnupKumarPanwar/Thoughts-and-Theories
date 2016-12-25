@@ -1,0 +1,30 @@
+
+
+<ion-view >
+    <ion-content >
+           
+
+
+ <ion-slide-box on-slide-changed="slideChanged()" on-swipe-left="onSwipeLeft()">
+     <ion-slide ng-repeat="image in allImages" style="background:black; overflow: hidden; overflow-x: hidden; overflow-y: hidden;"  >
+
+    
+	<ion-scroll zooming="true" direction="xy" style="width: 100vw; height: 100vh" min-zoom="1" max-zoom="10">
+      
+     
+       <div style="background-image: url('{{image.full_picture}}'); width: 100vw; height: 100vh; background-position: 0; background-size: 100%; background-repeat: no-repeat; overflow: hidden; overflow-x: hidden; overflow-y: hidden;">
+       	
+       </div>
+
+
+	</ion-scroll>
+
+     </ion-slide>
+     </ion-slide-box>
+
+           
+
+    </ion-content>    
+</ion-view >
+
+
