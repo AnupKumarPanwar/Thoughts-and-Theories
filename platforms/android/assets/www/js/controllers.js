@@ -44,7 +44,7 @@ if (access_token=='' || access_token==null || access_token=='null')
 
 
 
-      $http.get("https://graph.facebook.com/v2.8//thoughtstheories/posts?fields=full_picture&include_hidden=true&limit="+limitOfPosts+"&access_token="+access_token)
+      $http.get("https://graph.facebook.com/v2.8/Rajnikant.Vs.CIDJokez/posts?fields=full_picture&include_hidden=true&limit="+limitOfPosts+"&access_token="+access_token)
         .then(function(response) {
             $scope.allImages=response.data.data;
             $ionicSlideBoxDelegate.update();
@@ -89,7 +89,7 @@ if (access_token=='' || access_token==null || access_token=='null')
       if (onWhichSlide==(limitOfPosts/2)) 
       {
         limitOfPosts+=10;
-        $http.get("https://graph.facebook.com/v2.8//thoughtstheories/posts?fields=full_picture&include_hidden=true&limit="+limitOfPosts+"&access_token="+access_token)
+        $http.get("https://graph.facebook.com/v2.8/Rajnikant.Vs.CIDJokez/posts?fields=full_picture&include_hidden=true&limit="+limitOfPosts+"&access_token="+access_token)
           .then(function(response) {
               $scope.allImages=response.data.data;
             	$ionicSlideBoxDelegate.update();
@@ -106,10 +106,10 @@ if (access_token=='' || access_token==null || access_token=='null')
 
 
     $scope.shareIt = function() {
-        var message = 'Download *Thoughts & Theories* Android App                                        ';
+        var message = 'Download *Rajnikant Vs CID Jokez* Android App                                        ';
         var imageSource = $scope.allImages[onWhichSlide].full_picture;
-        var shareLink = 'https://play.google.com/store/apps/details?id=com.anupkumarpanwar.thoughtsandtheories';
-        window.plugins.socialsharing.share(message, 'Thoughts & Theories', imageSource, shareLink);
+        var shareLink = 'https://play.google.com/store/apps/details?id=com.Rajnikant.Vs.CIDJokez.page';
+        window.plugins.socialsharing.share(message, 'Rajnikant Vs CID Jokez', imageSource, shareLink);
     };
 
 

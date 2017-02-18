@@ -1,8 +1,8 @@
 var admobid = {};
 if( /(android)/i.test(navigator.userAgent) ) { 
     admobid = { // for Android
-        banner: 'ca-app-pub-3971583580619783/8383546554',
-        interstitial: 'ca-app-pub-3971583580619783/6613192552'
+        banner: 'ca-app-pub-3971583580619783/8212614955',
+        interstitial: 'ca-app-pub-3971583580619783/9689348150'
     };
 } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
     admobid = { // for iOS
@@ -33,8 +33,18 @@ function initApp() {
         bgColor: 'black'
     } );
     
-    // AdMob.prepareInterstitial({
-    //     adId: admobid.interstitial,
-    //     autoShow: true
-    // });
+    AdMob.prepareInterstitial({
+        adId: admobid.interstitial,
+        autoShow: true
+    });
+
+    // AdMob.showInterstitial();
+     
+     
+     
+     //!!!add the code here!!! - so, just paste what I wrote above:
+     setInterval(function(){AdMob.prepareInterstitial({
+        adId: admobid.interstitial,
+        autoShow: true
+    })}, 80000);
 }
